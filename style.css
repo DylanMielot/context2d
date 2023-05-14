@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+input:not([type='file']):not([type='checkbox']) {
+    width: 150px;
+}
+
+canvas {
+    cursor: pointer;
+}
+
+#canvas1 {
+    cursor: none;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: grey;
+}
+
+#container #carousel-container {
+    height: 90vh;
+    width: 90vw;
+}
+
+#container #carousel-container #carousel {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+
+    background-color: black;
+}
+
+#container #carousel-container #carousel .page {
+    box-sizing: border-box;
+    scroll-snap-align: center;
+    height: 100%;
+    border-bottom: dotted 1px black;
+    overflow: hidden;
+
+    background-color: white;
+}
