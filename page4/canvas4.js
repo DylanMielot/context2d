@@ -55,13 +55,7 @@ class Particle4 {
 
                 //motion
                 this.newAngle = flowFieldIndex.colorAngle
-                if (this.angle > this.newAngle) {
-                    this.angle -= this.angleCorrector
-                } else if (this.angle < this.newAngle) {
-                    this.angle += this.angleCorrector
-                } else {
-                    this.angle = this.newAngle
-                }
+                this.angle += (this.newAngle - this.angle) * Math.random() * 0.1 + 0.01
 
                 //color
                 if (flowFieldIndex.alpha > 0) {
